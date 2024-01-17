@@ -14,8 +14,8 @@ class UserResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'email' => $this->email,
-            'created' => Carbon::make($this->created_at)->format('Y-m-d'),
-            'updated' => Carbon::make($this->updated_at)->format('Y-m-d')
+            'created' => Carbon::make($this->created_at)?->format('Y-m-d'),
+            'updated' => Carbon::make($this->updated_at)?->format('Y-m-d')
         ];
     }
 }
