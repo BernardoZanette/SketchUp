@@ -14,7 +14,7 @@ Route::apiResource('/sketches', SketchesController::class);
 
 Route::get('/', function () {
     return response()->json([
-        'success' => true
+        'response' => true
     ]);
 });
 
