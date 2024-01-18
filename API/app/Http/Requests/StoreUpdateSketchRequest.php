@@ -21,13 +21,22 @@ class StoreUpdateSketchRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
+            'user_id' => 'required',
             'title' => 'max:255',
-            'img' => [
+            'image' => [
                 'required',
-                'mimes:jpeg,jpg,png,bmp|max:5000'
+                'mimes:jpeg,jpg,png,bmp',
+                'max:5000'
             ],
             'note' => 'min:3|max:255'
         ];
+
+        if ($this->method() === 'PATCH') {
+            $rules['user_id'] = '';
+            $rules['image'] = 'nullable';
+        }
+
+        return $rules;
     }
 }

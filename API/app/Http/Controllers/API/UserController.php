@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\API;
 
 use App\Models\User;
 use Illuminate\Http\Response;
@@ -10,7 +10,6 @@ use App\Http\Requests\StoreUpdateUserRequest;
 
 class UserController extends Controller
 {
-
     public function __construct(protected User $repository) {}
 
     public function index() {
@@ -39,7 +38,7 @@ class UserController extends Controller
     }
 
     public function update(StoreUpdateUserRequest $request, string $id) {
-        
+
         $user = $this->repository->findOrFail($id);
 
         $data = $request->validated();
@@ -48,6 +47,7 @@ class UserController extends Controller
         $user->update($data);
 
         return new UserResource($user);
+        
     }
 
     public function destroy(string $id) {
@@ -56,6 +56,5 @@ class UserController extends Controller
         
         return response()->json([], Response::HTTP_NO_CONTENT);
     }
-
 
 }

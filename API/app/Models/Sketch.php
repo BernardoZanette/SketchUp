@@ -9,7 +9,7 @@ class Sketch extends Model
     protected $fillable = [
         'user_id',
         'title',
-        'img',
+        'image',
         'note',
     ];
 
