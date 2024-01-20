@@ -1,6 +1,18 @@
 <div>
-    <h1>Your Sketches!</h1>
+    <h1 class="text-center text-xl mt-12">Your Sketches!</h1>
+    <a routerLink="/add-sketch" class="inline-block bg-green-200 px-3 py-1 text-sm font-semibold text-gray-900 ml-12">Add New Sketch!  <fa-icon [icon]="plusIcon"></fa-icon></a>
+    <div class="grid gap-4 grid-cols-3 p-12">
+        <div class="card flex flex-col shadow-lg border-2 border-orange-400 rounded-xl p-4" *ngFor="let item of this.sketches">
+            <div class="font-bold text-center text-lg">{{item.title}}</div>
+            <img class="my-4" src="{{item.image}}">
+            <p class="ml-4 text-justify">{{item.note}}</p>
+            <div class="px-6 pt-4 pb-2 flex flex-row justify-end">
+                <span class="inline-block bg-yellow-200 px-3 py-1 text-sm font-semibold text-gray-900 mr-2">Edit  <fa-icon [icon]="pencilIcon"></fa-icon></span>
+                <span class="inline-block bg-red-300 px-3 py-1 text-sm font-semibold text-gray-900">Delete  <fa-icon [icon]="trashIcon"></fa-icon></span>
+            </div>
+        </div>
+    </div>
+
     <p>Show all sketches of database related to the user</p>
     <p>Add, edit and delete button</p>
-    <p>Topics of the post: "Tittle", "Sketch" (photo) and "Concept"</p>
 </div>

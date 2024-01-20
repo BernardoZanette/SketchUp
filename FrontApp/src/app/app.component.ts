@@ -9,7 +9,7 @@ import { NavbarComponent } from './components/Partials/navbar/navbar.component';
   imports: [
     CommonModule, 
     RouterOutlet,
-    NavbarComponent
+    NavbarComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
