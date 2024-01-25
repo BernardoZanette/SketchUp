@@ -2,8 +2,10 @@
   <div class="grid grid-cols-3 justify-between py-3 px-4 [&>*]:flex [&>*]:flex-row [&>*]:items-center">
 
     <div>
-      <img class="w-12" src="assets/nav-bar/logo.png" alt="logo: esboço de rosto">
-      <span>SketchUp</span>
+      <a [routerLink]="['/']" class="flex flex-row items-center">
+        <img class="w-12 mr-4" src="assets/nav-bar/logo.png" alt="logo: esboço de rosto">
+        <span class="text-xl">SketchUp</span>
+      </a>
     </div>
 
     <div class="border border-solid border-gray-600 rounded-3xl h-min px-6 py-2">
@@ -17,8 +19,8 @@
     </div>
 
     <div class="justify-self-end">
-      <button class="mr-10 border border-solid border-black px-4 py-2 rounded">Sign In</button>
-      <button class="mr-2 bg-gray-900 px-4 py-2 rounded text-white border border-gray-900">Sign Up</button>
+      <a [routerLink]="['/sign-in']" class="mr-10 border border-solid border-black px-4 py-2 rounded">Sign In</a>
+      <a [routerLink]="['/sign-up']" class="mr-2 bg-gray-900 px-4 py-2 rounded text-white border border-gray-900">Sign Up</a>
     </div>
 
   </div>
