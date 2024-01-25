@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NavBarService } from '../../../Services/nav-bar.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })
-export class SignInComponent {
+export class SignInComponent implements OnInit, OnDestroy{
+  constructor (private navbarService: NavBarService) {}
 
-}
+    ngOnInit(): void {
+       this.navbarService.hide()
+    }
+
+    ngOnDestroy(): void {
+      this.navbarService.display()
+    }
+
+} 
