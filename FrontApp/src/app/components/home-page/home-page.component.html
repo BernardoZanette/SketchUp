@@ -1,8 +1,26 @@
-<div>
-    <h1>Home Page [...]</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-        Quasi molestiae aut corporis, error est, recusandae ex aperiam 
-        assumenda vel praesentium earum velit. 
-        Fugit, officia. Laborum iusto doloremque eum mollitia voluptates.
-    </p>
+<div class="flex flex-col">
+    <div class="flex flex-col items-center bg-cover bg-no-repeat py-24 " [ngStyle]="{ backgroundImage: 'url(' +  first_top_image + ')' }">
+    
+        <h1 class="self-center text-4xl text-white">Feeling creative ?</h1>
+        <span class="inline border-solid border-2 border-orange-600 p-2 rounded-sm mt-12 text-white text-xl">
+            <a routerLink="/add-sketch">Add a new Sketch!</a>
+        </span>
+    
+    </div>
+    <div>
+        <p class="text-4xl py-14 border-solid border-2 border-y-black text-center">Or maybe...</p>
+    </div>
+    <div class="flex flex-col bg-cover bg-no-repeat py-24 text-white" [ngStyle]="{ backgroundImage: 'url(' +  second_bottom_image + ')' }">
+        <h2 class="self-center text-4xl">Searching for inspiration ?</h2>
+        <div class="mt-16">
+            <ul class="grid grid-cols-3 justify-items-center gap-10 list-disc text-2xl [&>*>*>*]:text-xl">
+                <li><a target="_blank" href="https://br.pinterest.com/search/pins/?q=super%20heroes%20sketch&rs=typed">Heroes  <fa-icon [icon]="left_arrow_icon"></fa-icon></a></li>
+                <li><a target="_blank" href="https://br.pinterest.com/search/pins/?q=nature%20sketch&rs=typed">Nature  <fa-icon [icon]="left_arrow_icon"></fa-icon></a></li>
+                <li><a target="_blank" href="https://br.pinterest.com/search/pins/?q=monsters%20sketch&rs=typed">Monsters  <fa-icon [icon]="left_arrow_icon"></fa-icon></a></li>
+                <li><a target="_blank" href="https://br.pinterest.com/search/pins/?q=anatomy%20sketch&rs=typed">Anatomy  <fa-icon [icon]="left_arrow_icon"></fa-icon></a></li>
+                <li><a target="_blank" href="https://br.pinterest.com/search/pins/?q=anime%20sketch&rs=typed">Anime characters  <fa-icon [icon]="left_arrow_icon"></fa-icon></a></li>
+                <li><a target="_blank" href="https://br.pinterest.com/">Others...  <fa-icon [icon]="left_arrow_icon"></fa-icon></a></li>
+            </ul>
+        </div>
+    </div>
 </div>

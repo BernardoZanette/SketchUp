@@ -9,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AboutUsComponent {
 
+  // IMAGES
+
+  facebook_image = "assets/sponsors/facebook.png"
+  google_image = "assets/sponsors/google.png"
+  tesla_image = "assets/sponsors/tesla.png"
+  pinterest_image = "assets/sponsors/pinterest.png"
+
 }
