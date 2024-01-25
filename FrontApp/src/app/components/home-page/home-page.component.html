@@ -3,12 +3,15 @@
     
         <h1 class="self-center text-4xl text-white">Feeling creative ?</h1>
         <span class="inline border-solid border-2 border-orange-600 p-2 rounded-sm mt-12 text-white text-xl">
-            <a routerLink="/add-sketch">Add a new Sketch!</a>
+            <a *ngIf="logged" routerLink="/add-sketch">Add a new Sketch!</a>
+            <a *ngIf="!logged" routerLink="Signs/sign-in">Add a new Sketch!</a>
         </span>
     
     </div>
-    <div>
-        <p class="text-4xl py-14 border-solid border-2 border-y-black text-center">Or maybe...</p>
+    <div class="flex flex-row items-center justify-evenly py-12 border-solid border-2 border-y-black">
+        <img [src]="middle_line_image" class="transform -scale-x-100">
+        <p class="text-4xl text-center">Or maybe...</p>
+        <img [src]="middle_line_image">
     </div>
     <div class="flex flex-col bg-cover bg-no-repeat py-24 text-white" [ngStyle]="{ backgroundImage: 'url(' +  second_bottom_image + ')' }">
         <h2 class="self-center text-4xl">Searching for inspiration ?</h2>

@@ -20,8 +20,13 @@ export class HomePageComponent {
   // IMAGES //  
   first_top_image = "assets/home-page/home-back-ground-top.jpg"
   second_bottom_image = "assets/home-page/home-back-ground-bottom.jpg"
+  middle_line_image = "assets/home-page/middle_line.png"
 
   // ICONS //
   left_arrow_icon = faUpRightFromSquare
+  
+  // OTHER VARIABLES //
+  
+  logged = false
 
 }

@@ -8,7 +8,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
   standalone: true,
   imports: [
     RouterModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
