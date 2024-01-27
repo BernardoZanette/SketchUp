@@ -22,6 +22,9 @@ export class NavbarComponent implements OnDestroy {
   // ICONS //
   search_icon = faSearch
 
+  // IMAGES //
+  logo_image = "assets/general/logo.png"
+
   // OTHER VARIABLES //
 
   showNavbar: boolean=true;

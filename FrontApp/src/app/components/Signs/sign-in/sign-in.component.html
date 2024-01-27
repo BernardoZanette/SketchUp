@@ -1,8 +1,10 @@
-<div>
-    <form action="">
-        <img src="" alt="LOGO">
-        <input type="text" name="name" placeholder="Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-    </form>
+<div [ngStyle]="{ backgroundImage: 'url(' +  signs_back_ground + ')' }" class="h-screen pt-28 bg-cover bg-no-repeat flex justify-center">
+    <div class="flex justify-center w-min h-min">
+        <form form="" class="flex flex-col bg-white p-12 border-2 border-black rounded-2xl [&>*]:self-center [&>input]:mb-8 [&>input]:outline-none [&>input]:placeholder-gray-900 [&>input]:text-3xl [&>input]:border-b [&>input]:border-gray-900 [&>input]:w-72">
+            <img [src]="logo_image" alt="logo: esboço rosto" class="mb-8 h-44">
+            <input type="text" name="name" placeholder="Name">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit" class="bg-gray-900 text-white text-2xl rounded mt-4 w-fit py-2 px-4">Sign In</button>
+        </form>
+    </div>
 </div>
