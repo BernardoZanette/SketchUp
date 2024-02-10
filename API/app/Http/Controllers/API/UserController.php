@@ -24,6 +24,7 @@ class UserController extends Controller
         $user = $this->repository->findOrFail($id);
 
         return new UserResource($user);
+        
     }
     
     public function store(StoreUpdateUserRequest $request) {
@@ -35,6 +36,7 @@ class UserController extends Controller
         $user = $this->repository->create($data);
     
         return new UserResource($user);
+
     }
 
     public function update(StoreUpdateUserRequest $request, string $id) {
